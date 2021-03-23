@@ -1,5 +1,12 @@
-import requests, winsound, webbrowser, json
+import winsound, webbrowser, json, os
 from time import sleep
+
+
+try:
+    import requests
+except ImportError:
+    os.system("pip install requests")
+    import requests
 
 with open('config.txt') as file:
     json_data = json.load(file)

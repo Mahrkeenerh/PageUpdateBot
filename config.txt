@@ -1,3 +1,4 @@
 {
-    "url": "https://www.lttstore.com/3070BA"
+    "url": "https://www.lttstore.com/3070BA",
+    "update_frequency": 2
 }

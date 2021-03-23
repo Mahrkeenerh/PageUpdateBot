@@ -20,11 +20,10 @@ new_request = old_request
 while True:
     sleep(frequency)
     new_request = requests.get(url=url)
-    if new_request.status_code != 200:
-        print(new_request.status_code)
 
-webbrowser.open(url)
-
-while True:
-    winsound.Beep(750, 750)
-    sleep(0.1)
+    if new_request.content != old_request.content:
+        webbrowser.open(url)
+        winsound.Beep(750, 750)
+        sleep(0.1)
+        winsound.Beep(750, 750)
+        old_request = new_request

@@ -23,7 +23,6 @@ while True:
 
     if new_request.content != old_request.content:
         webbrowser.open(url)
-        winsound.Beep(750, 750)
-        sleep(0.1)
-        winsound.Beep(750, 750)
+        winsound.Beep(750, 250)
+	winsound.Beep(750, 250)
         old_request = new_request
